@@ -5,7 +5,7 @@ description = "Batch pricing engine for phone + SIM-only plans: 24-month TCO, ca
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Amir Shadanfar" }]
-requires-python = ">=3.13"
+requires-python = ">=3.15"
 dependencies = []
 
 [dependency-groups]
@@ -24,14 +24,14 @@ module-name = "tariff_pricing"
 
 [tool.ruff]
 line-length = 100
-target-version = "py313"
+target-version = "py315"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
 
 [tool.mypy]
 strict = true
-python_version = "3.13"
+python_version = "3.15"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

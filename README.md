@@ -27,7 +27,7 @@ too slow, so this project separates the work into two parts:
 
 ## Development
 
-Requires [uv](https://docs.astral.sh/uv/) and Python 3.13+.
+Requires [uv](https://docs.astral.sh/uv/) and Python 3.15+.
 
 ```bash
 uv sync               # install dependencies
