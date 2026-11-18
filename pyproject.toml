@@ -1,0 +1,38 @@
+[project]
+name = "tariff-pricing-engine"
+version = "0.1.0"
+description = "Batch pricing engine for phone + SIM-only plans: 24-month TCO, cashback, Pareto filtering"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Amir Shadanfar" }]
+requires-python = ">=3.15"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "tariff_pricing"
+
+[tool.ruff]
+line-length = 100
+target-version = "py315"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+strict = true
+python_version = "3.15"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
